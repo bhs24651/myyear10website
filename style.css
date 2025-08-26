@@ -1,0 +1,159 @@
+/* A simple css reset */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* The Font Family- Really important!! */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* reset for images to ensure they are 100% of the parent container width */
+img {
+    width: 100%;
+}
+
+/* The hero section styling- use your OWN Hero Image URL here */
+.hero {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 4em;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    .hero-text {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+/* BIG text styling for the hero section text */
+.hero-text {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* nice big font on a banner style background */
+.topic-title{
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    padding: 0.1em;
+    background-color: rgb(71, 71, 71);
+}
+
+.topic-content{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.paragraph {
+    font-size: 20px;
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 1000px;
+}
+
+/* Styling for the navigation bar */
+nav {
+    background-color: rgb(39, 39, 39);
+    text-align: center;
+    padding: 1em;
+}
+
+nav ul li {
+    display: inline;
+    padding: 20px;
+    font-size: 1.25em;
+    color: white;
+    white-space: nowrap;
+    line-height: 2em;
+    
+}
+
+li.current {
+    color: #808080;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #808080;
+}
+
+#homepage-image {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    background-color: rgb(71, 71, 71);
+}
+
+#computer-science-binary {
+    color: gray;
+}
+
+/* Three column grid with a nice big gap */
+/* .topic-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6em;
+    /* bring the whole section in off the sides of the page 
+    width: 70%;
+    /* top margin of 3em and center right/left 
+    margin: 3em auto;
+} */
+
+.image-creation-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: 0 auto;
+    padding: 1em 0;
+}
+
+/* Styling for the individual topic cards rounded edges background color and a drop shadow */
+.topic-card{
+    background-color: rgb(71, 71, 71);
+    color: white;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the topic card titles */
+.topic-card-text{
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    /* center align text */
+    text-align: center;
+}
+
+
+/* Styling for a footer section to take a bit of space at the bottom of the page */
+.footer{
+    background-color: rgb(71, 71, 71);
+    color: white;
+    text-align: right;
+    padding: 3em 3em;
+}
